@@ -150,6 +150,9 @@ export const NavigationMenuItemInlineEditor = ({
         autoFocus
         selectOnFocus
         copyButton={false}
+        // Trimming on each keystroke drops the space typed between words;
+        // the name is trimmed once when the rename is submitted
+        shouldTrim={false}
         value={name}
         onChange={setName}
         onEnter={finishRename}
